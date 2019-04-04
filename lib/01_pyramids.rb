@@ -35,7 +35,7 @@ def wtf_pyramid
     puts "$" * (2 * n + 1)
     end
     
-    choix.times do |n| #Y a rien gros écart, je sais, et franchement.....voilà
+    choix.times do |n| #Y a un gros écart, je sais, et franchement.....voilà
         print " " * (n + 2)
         puts "$" * ((2 + choix) * (2 - 1)-(2*n))
         end
@@ -51,5 +51,5 @@ end
 
 perform
 
-#question de mes collègues m'ont quasi tous posés. Mais où as-tu trouvé rjust?
+#question que mes collègues m'ont quasi tous posés. Mais où as-tu trouvé rjust?
 #Hey bah voilà https://www.digitalocean.com/community/tutorials/how-to-work-with-string-methods-in-ruby
