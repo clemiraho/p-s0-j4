@@ -1,10 +1,13 @@
 
-def pyramids
+def get_height
     puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux tu ? "
     print "> "
     number = gets.chomp.to_i
-    puts "Voici la pyramide :"
+    return number
+end
 
+def half_pyramid(number)
+    puts "Voici la pyramide :"
     i = 1
     k = 0
         if number > 0 && number < 26
@@ -22,7 +25,8 @@ def pyramids
 end
 
 def perform
-    pyramids
+    number = get_height
+    half_pyramid
 end
 
 perform
