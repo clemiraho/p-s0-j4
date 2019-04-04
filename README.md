@@ -9,4 +9,4 @@
 
     - 03_stairway.rb
 
-Fait par Nicolas Rubin @Nico et 
+Fait par Nicolas Rubin @Nico et Clement  Delerry @Clem
