@@ -1,42 +1,38 @@
 def game
-    $starting_pos = 0
-    $end_pos = 10
-end
-
-def dice
-    1 + rand(6)
-    return roll
-    put roll
-end
-
-def roll_value(roll)
-    if roll == 5 || 6
-        value = 1
-        puts "Vous avancez de 1"
-    elseif roll == 1
-        value = -1
-        puts "Vous reculez de 1"
-    else
-        value = 0
-        puts "Vous ne bougez pas"
-    end
-    return value
-    put value
-end
-
-def movement(value)
-    position = position + value
-    return position
-    put position
-end
-
-def perform
-    game
-    roll = dice
-    value 
-    roll_value(roll)
-    movement(value)
-
-
-
-
+    puts "Alea Jacta Est"
+    puts "> ENTER to start"
+    gets.chomp
+ 
+ $steps = 10 #total steps
+ $position = 0 #initiale position
+ 
+ end
+ 
+ def dice
+ 
+ roll = rand(1..6)
+     puts roll
+     if roll > 4
+    $position += 1
+    puts "One step forward, step #{$position}."
+     elsif roll == 1 && $position != 0
+        $position -= 1
+        puts "One step backward, step #{$position}."
+     elsif roll == 1 && $position == 0
+       $position += 0
+       puts "On peut pas tomber plus bas"
+     else
+        puts "Stay where you are, step #{$position}."
+     end
+ 
+ end
+ 
+ def perform
+ game
+ while $position < $steps #merci beaucoup le site w3resource expliquant le principe d'expression dans une loop
+    dice
+ end
+ puts "Top of the world !"
+ end
+ 
+ perform
